@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generator = require("./utils/generateMarkdown");
-
 const questions = [
     {
         name: 'title',
@@ -55,7 +54,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => {
+        const readme = generator(answers);
+        writeToFile('README.md', readme);
+    })
+}
 
 // Function call to initialize app
 init();
