@@ -33,7 +33,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license:',
-        choices: ['MIT', 'Apache', 'GPL', 'Mozilla', 'BSD 3']
+        choices: ['MIT', 'Apache', 'GPL v3', 'MPL 2.0', 'BSD 3', 'None']
     },
     {
         name: 'github',
@@ -47,12 +47,17 @@ const questions = [
 
 // Function to write data to file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
-        if (err) {
-            console.log(err);
+    const outputDir = './output/';
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir);
+    }
+
+    fs.writeFile(outputDir + fileName, data, (error) => {
+        if (error) {
+            console.log(`Error writing to ${fileName}`, error);
             return;
         }
-        console.log('README.md file created');
+        console.log(`${fileName} file created`);
     })
 }
 
@@ -60,7 +65,7 @@ function writeToFile(fileName, data) {
 function init() {
     // Prompt the user with the questions array
     inquirer.prompt(questions)
-    .then((answers) => { // Handle user answers
+    .then((answers) => {
         // Generate README content using user answers
         const readme = generator(answers);
         // Write README content to file
