@@ -80,7 +80,7 @@ ${data.test}
 
 For questions, contact me:
 - [Github](https://github.com/${data.github})
-- [Email](${data.email})
+- [Email](mailto:${data.email})
 
 ## License
 ${renderLicenseSection(data.license)}`;
