@@ -57,7 +57,7 @@ The Static Site Generator is a Node.js application that generates static website
 
 ## Preview
 
-![Preview]()
+A video preview of the application can be found [here]()
 
 ---
 
