@@ -57,7 +57,7 @@ The Static Site Generator is a Node.js application that generates static website
 
 ## Preview
 
-A video preview of the application can be found [here]()
+A video preview of the application can be found [here](https://jordanchives.github.io/readme-generator/)
 
 ---
 
