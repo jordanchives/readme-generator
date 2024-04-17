@@ -1,8 +1,8 @@
-# Static Site Generator
+# README Generator
 
 ## Description
 
-The Static Site Generator is a Node.js application that generates static websites based on user-provided input. It prompts the user with questions to gather information about the project and then generates a README.md file with the provided data.
+The README Generator is a Node.js application that generates READMEs based on user-provided input. It prompts the user with questions to gather information about the project and then generates a README.md file with the provided data.
 
 ## Table of Contents
 
