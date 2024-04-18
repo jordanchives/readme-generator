@@ -55,6 +55,10 @@ The README Generator is a Node.js application that generates READMEs based on us
 
 4. Once all questions are answered, a README.md file will be generated in the `output` directory.
 
+## Example
+
+An example output README can be found [here](./example/README.md)
+
 ## Preview
 
 A video preview of the application can be found [here](https://jordanchives.github.io/readme-generator/)
